@@ -18,11 +18,11 @@ public class Main implements EntryPoint {
 			}
 		});
 		
+		RootPanel panel = RootPanel.get("container");
 		
-		RootPanel.get().add(new FavoriteCheckBox());
-		
-		
-		
+		panel.add(new Spinner());
+		panel.add(new TimePicker());
+		panel.add(new FavoriteCheckBox());
 	}
 
 }
