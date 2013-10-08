@@ -3,6 +3,11 @@
 <module rename-to="gwt_stuff">
 	<inherits name="com.google.gwt.user.User" />
 	
+	
+	<inherits name="com.google.gwt.logging.Logging"/>
+	<set-property name="gwt.logging.popupHandler" value="ENABLED" />
+	
+	
 	<entry-point class="com.sathkumara.client.client.Main"/>
 	<source path="client"/>
 	<public path="public_html" />

@@ -18,7 +18,7 @@ public class FavoriteCheckBox extends ToggleButton {
 	public FavoriteCheckBox() {
 		super(new Image(imagesDir + "fave-inactive.png"), new Image(imagesDir + "fave.png"));
 		setSize("19px", "19px");
-		setStyleName("ehr-FavoriteCheckBox"); //Remove default ToggleButton style
+		setStyleName("FavoriteCheckBox"); //Remove default ToggleButton style
 	}
 	
 }

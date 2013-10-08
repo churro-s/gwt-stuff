@@ -64,6 +64,7 @@ public class ValueListBox<T> extends ListBox implements HasValue<T> {
 	public ValueListBox(ItemDisplay<T> provider) {
 		super();
 		this.provider = provider;
+		setStyleName("ValueListBox");
 	}
 	
 	public ValueListBox(ItemDisplay<T> provider, boolean addNullSelection) {
@@ -192,7 +193,7 @@ public class ValueListBox<T> extends ListBox implements HasValue<T> {
 	
 	@Override
 	public HandlerRegistration addValueChangeHandler(ValueChangeHandler<T> handler) {
-		return this.addValueChangeHandler(handler);
+		return addHandler(handler, ValueChangeEvent.getType());
 	}
 	
 	@Override
