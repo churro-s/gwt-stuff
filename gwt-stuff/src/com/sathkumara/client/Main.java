@@ -1,4 +1,4 @@
-package com.sathkumara.client.client;
+package com.sathkumara.client;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,8 +14,8 @@ import com.google.gwt.dom.client.LinkElement;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.sathkumara.client.client.ProgressBar.Type;
-import com.sathkumara.client.client.ValueListBox.ItemDisplay;
+import com.sathkumara.client.ProgressBar.Type;
+import com.sathkumara.client.ValueListBox.ItemDisplay;
 
 public class Main implements EntryPoint {
 

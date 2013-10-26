@@ -1,4 +1,4 @@
-package com.sathkumara.client.client;
+package com.sathkumara.client;
 
 import java.io.IOException;
 import java.text.ParseException;

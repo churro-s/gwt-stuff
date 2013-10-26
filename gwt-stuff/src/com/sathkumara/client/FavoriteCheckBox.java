@@ -1,4 +1,4 @@
-package com.sathkumara.client.client;
+package com.sathkumara.client;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.Image;

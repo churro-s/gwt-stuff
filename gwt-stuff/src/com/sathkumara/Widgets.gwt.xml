@@ -8,7 +8,7 @@
 	<set-property name="gwt.logging.popupHandler" value="ENABLED" />
 	
 	
-	<entry-point class="com.sathkumara.client.client.Main"/>
+	<entry-point class="com.sathkumara.client.Main"/>
 	<source path="client"/>
 	<public path="public_html" />
 	

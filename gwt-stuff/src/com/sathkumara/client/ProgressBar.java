@@ -1,4 +1,4 @@
-package com.sathkumara.client.client;
+package com.sathkumara.client;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.SimplePanel;

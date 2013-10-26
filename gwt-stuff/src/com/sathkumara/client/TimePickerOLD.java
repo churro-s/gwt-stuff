@@ -1,4 +1,4 @@
-package com.sathkumara.client.client;
+package com.sathkumara.client;
 
 import java.util.Date;
 
