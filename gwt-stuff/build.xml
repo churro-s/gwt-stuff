@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     gwt-stuff
+     Collection of reusable GWT widgets
+     Churro
+     ====================================================================== -->
+<project name="gwt-stuff" default="default" basedir=".">
+    <description>Collection of reusable GWT widgets</description>
+	
+	<!-- Absolute path to GWT SDK -->
+	<property name="gwt-sdk" location="C:/libs/gwt-2.6.0" />
+	
+	<!-- source directory -->
+	<property name="src" location="src" />
+	
+	<!-- Webapp WAR directory -->
+	<property name="war" location="war" />
+	
+	<!-- javac output directory -->
+	<property name="classes" location="${war}/WEB-INF/classes" />
+	
+	<!-- distributable output directory -->
+	<property name="dist" location="dist" />
+	
+	
+	<path id="classpath" description="set up classpath for javac" >
+		<fileset dir="${war}/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${gwt-sdk}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="clean" description="Clean previous compiler output" >
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${classes}" includes="**/*"/>
+			<fileset dir="${dist}" includes="**/*"/>
+			<fileset dir="gwt-unitCache"/>
+			<fileset dir="${war}/gwt_stuff" />
+			<fileset dir="${war}/WEB-INF/deploy" />
+		</delete>
+	</target>
+	
+	<target name="javac" depends="clean" description="java compile" >
+		<javac destdir="${classes}" srcdir="${src}" >
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+	
+	
+    <target name="default" depends="javac" description="Package distributable JAR">
+    	<jar destfile="${dist}/gwt-stuff.jar">
+    	    <fileset dir="${classes}" />
+    	    <fileset dir="${src}" includes="**/*"/>
+    	</jar>
+    </target>
+
+</project>
