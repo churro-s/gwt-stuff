@@ -1,24 +1,23 @@
 package com.sathkumara.client;
 
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.ToggleButton;
+import com.sathkumara.client.bundle.Resources;
 
 /**
  * This "CheckBox" is a Boolean field that indicates its current value with a 
  * star, highlighted for true, grayed out for false.
+ * This can be used in conjunction with custom events to indicate a favorite 
+ * was set or removed.
  * @author Churro
  */
 public class FavoriteCheckBox extends ToggleButton {
 	
-	
-	//The public_html dir compiles out to here.
-	public static final String imagesDir = GWT.getModuleBaseURL();
-	
 	public FavoriteCheckBox() {
-		super(new Image(imagesDir + "fave-inactive.png"), new Image(imagesDir + "fave.png"));
+		super(new Image(Resources.INSTANCE.fave_inactive()), new Image(Resources.INSTANCE.fave()));
 		setSize("19px", "19px");
-		setStyleName("FavoriteCheckBox"); //Remove default ToggleButton style
+		//Remove default ToggleButton style
+		setStyleName("FavoriteCheckBox");
 	}
 	
 }

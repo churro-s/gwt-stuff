@@ -1,3 +1,9 @@
+@external progress;
+@external bar*;
+@external ValueListBox;
+@external TimePicker;
+@external FavoriteCheckBox;
+
 /*
 // =============================================================================
 //              THE TIME PICKER WIDGET
